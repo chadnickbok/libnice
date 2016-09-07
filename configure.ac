@@ -132,7 +132,6 @@ AS_IF([test "x$enable_compile_warnings" != "xno" -a \
     NICE_ADD_FLAG([-Wdeclaration-after-statement])
     NICE_ADD_FLAG([-Wformat=2])
     NICE_ADD_FLAG([-Wold-style-definition])
-    NICE_ADD_FLAG([-Wcast-align])
     NICE_ADD_FLAG([-Wformat-nonliteral])
     NICE_ADD_FLAG([-Wformat-security])
 ])
@@ -145,11 +144,9 @@ AS_IF([test "$enable_compile_warnings" = "yes" -o \
     NICE_ADD_FLAG([-Winline])
     NICE_ADD_FLAG([-Wpacked])
     NICE_ADD_FLAG([-Wmissing-format-attribute])
-    NICE_ADD_FLAG([-Wmissing-noreturn])
     NICE_ADD_FLAG([-Winit-self])
     NICE_ADD_FLAG([-Wredundant-decls])
     NICE_ADD_FLAG([-Wmissing-include-dirs])
-    NICE_ADD_FLAG([-Wunused-but-set-variable])
     NICE_ADD_FLAG([-Warray-bounds])
 ])
 AS_IF([test "$enable_compile_warnings" = "maximum" -o \
@@ -160,7 +157,7 @@ AS_IF([test "$enable_compile_warnings" = "maximum" -o \
 ])
 AS_IF([test "x$enable_compile_warnings" = "xerror"],[
     NICE_ADD_FLAG([-Werror])
-    NICE_ADD_FLAG([-Wno-suggest-attribute=format])
+    NICE_ADD_FLAG([-Wno-tautological-compare])
 ])
 
 #
